@@ -598,7 +598,7 @@
 
             <div class="views-badge">
                 <i class="fa-solid fa-eye"></i>
-                <span id="views">56.924</span> VIEWS
+                <span id="views">236,652</span> VIEWS
             </div>
 
             <div class="discord-widget" id="discord-widget"
@@ -723,7 +723,7 @@
         function startViewsCounter() {
             const viewsEl = document.getElementById('views');
             let start = 10000;
-            const end = 56924;
+            const end = 236652;
             const duration = 2000; // 2 seconds
             const startTime = performance.now();
 
@@ -737,12 +737,12 @@
                 const currentVal = Math.floor(start + (end - start) * easeProgress);
                 
                 // Format with dot separator (e.g. 56.924)
-                viewsEl.textContent = currentVal.toLocaleString('es-ES').replace(/,/g, '.');
+                viewsEl.textContent = currentVal.toLocaleString('en-US');
 
                 if (progress < 1) {
                     requestAnimationFrame(updateCounter);
                 } else {
-                    viewsEl.textContent = "56.924";
+                    viewsEl.textContent = "236,652";
                 }
             }
             
